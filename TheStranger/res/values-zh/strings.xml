@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">陌路人</string>
+	<string name="fail_url">陌路人聊天室</string>
+	<string name="connect_fail">网络连接失败！！！\n请检查您的网络\n触摸屏幕重试</string>
+
+</resources>

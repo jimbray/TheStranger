@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TheStranger</string>
+    <string name="action_settings">Settings</string>
+	<string name="url">http://moluren.net/chat/</string>
+	<string name="fail_url">The Chatroom</string>
+	<string name="connect_fail">Connection Failed!!!\nPlease Check Your Network State\nTouch the screen to retry</string>
+
+</resources>
+
