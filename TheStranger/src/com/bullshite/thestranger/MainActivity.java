@@ -1,5 +1,12 @@
 package com.bullshite.thestranger;
 
+
+
+import net.youmi.android.AdManager;
+import net.youmi.android.banner.AdSize;
+import net.youmi.android.banner.AdView;
+import net.youmi.android.diy.banner.DiyAdSize;
+import net.youmi.android.diy.banner.DiyBanner;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -15,6 +22,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -29,16 +37,30 @@ public class MainActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		//�����ޱ���  
+		//�����ޱ���  
         requestWindowFeature(Window.FEATURE_NO_TITLE);  
-        //����ȫ��  
+        //����ȫ��  
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,   
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);  
         
 		setContentView(R.layout.activity_main);
 		
 		init();
+		initAd();
 		start();
+	}
+	
+	private void initAd() {
+		// 初始化应用的发布ID和密钥，以及设置测试模式
+        AdManager.getInstance(this).init("a26e2fb6e3d6c696","609b4188ff8c35e8", false); 
+        
+     // Mini广告
+        ((RelativeLayout)findViewById(R.id.mini_adLayout)).addView(new DiyBanner(this, DiyAdSize.SIZE_MATCH_SCREENx32));
+        
+     // 广告条接口调用        
+        LinearLayout adLayout = (LinearLayout) findViewById(R.id.ad_bottombar_Layout);
+        AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+        adLayout.addView(adView);
 	}
 	
 	@SuppressLint({ "SetJavaScriptEnabled", "JavascriptInterface" })

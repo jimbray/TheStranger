@@ -9,7 +9,7 @@
 	<string name="start_chat">开始聊天</string>
 	
 	<string name="introduce_title">陌路人 - 和陌生人聊天</string>
-	<string name="introduce">陌路人 是一个在线认识新朋友的全新服务。当你登录 陌路人时，我们随机选取另外一个用户和你搭配一对一的聊天。整个对话是在匿名状态下进行的，当然，这并不会限制你向你的陌生朋友透露你的联系方式以获取更进一步的联络。</string>
+	<string name="introduce">陌路人 是一个在线认识新朋友的全新服务。当你登录 陌路人时，我们随机选取另外一个用户和你搭配一对一的聊天。整个对话是在匿名状态下进行的，当然，这并不会限制你向你的陌生朋友透露你的联系方式以获取更进一步的联络。请文明聊天。</string>
 	<string name="btn_connecting">正在连接......</string>
 
 </resources>

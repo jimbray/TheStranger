@@ -4,10 +4,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
+    <RelativeLayout
+            android:id="@+id/mini_adLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" >
+    </RelativeLayout>
 
     <WebView android:id="@+id/webview"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent"
+        android:layout_below="@id/mini_adLayout" />
     <TextView android:id="@+id/tv_connect_failed"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -19,7 +26,9 @@
     <RelativeLayout android:id="@+id/layout_main"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#c5ccd4">
+        android:background="#c5ccd4"
+        android:layout_below="@id/mini_adLayout"
+        android:layout_above="@+id/ad_bottombar_Layout">
         <Button android:id="@+id/btn_start_up"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -68,5 +77,15 @@
             android:layout_alignParentBottom="true"/>
         
     </RelativeLayout>
+    
+    <LinearLayout
+            android:id="@id/ad_bottombar_Layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            >
+    </LinearLayout>
 
 </RelativeLayout>

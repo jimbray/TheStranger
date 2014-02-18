@@ -25,12 +25,14 @@ public final class R {
         public static final int moshengren_big=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080005;
-        public static final int btn_start_bottom=0x7f080004;
-        public static final int btn_start_up=0x7f080003;
-        public static final int layout_main=0x7f080002;
-        public static final int tv_connect_failed=0x7f080001;
-        public static final int webview=0x7f080000;
+        public static final int action_settings=0x7f080007;
+        public static final int ad_bottombar_Layout=0x7f080004;
+        public static final int btn_start_bottom=0x7f080006;
+        public static final int btn_start_up=0x7f080005;
+        public static final int layout_main=0x7f080003;
+        public static final int mini_adLayout=0x7f080000;
+        public static final int tv_connect_failed=0x7f080002;
+        public static final int webview=0x7f080001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -76,5 +78,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int Transparent=0x7f060002;
     }
 }
