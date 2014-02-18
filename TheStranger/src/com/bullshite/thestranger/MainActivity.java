@@ -1,10 +1,9 @@
 package com.bullshite.thestranger;
 
-import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,12 +14,16 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener {
 	private WebView mWebView;
 	private TextView mTvConnectFail;
 	private boolean isLoadFail;
+	private Button mBtnStartUp, mBtnStartBottom;
+	private RelativeLayout mLayoutMain;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,16 @@ public class MainActivity extends Activity implements OnClickListener {
 	private void init() {
 		mTvConnectFail = (TextView) findViewById(R.id.tv_connect_failed);
 		mTvConnectFail.setOnClickListener(this);
+		
+		mLayoutMain = (RelativeLayout) findViewById(R.id.layout_main);
+		
+		mBtnStartUp = (Button) findViewById(R.id.btn_start_up);
+		mBtnStartBottom = (Button) findViewById(R.id.btn_start_bottom);
+		mBtnStartUp.setOnClickListener(this);
+		mBtnStartBottom.setOnClickListener(this);
+		
+		mBtnStartUp.setEnabled(false);
+		mBtnStartBottom.setEnabled(false);
 		
 		mWebView = (WebView) findViewById(R.id.webview);
 		
@@ -78,6 +91,12 @@ public class MainActivity extends Activity implements OnClickListener {
 //				mWebView.loadUrl("javascript:onStartChatClick()");
 //				mTvConnectFail.setVisibility(View.GONE);
 				super.onPageFinished(view, url);
+
+				mBtnStartUp.setText(R.string.start_chat);
+				mBtnStartBottom.setText(R.string.start_chat);
+				mBtnStartUp.setEnabled(true);
+				mBtnStartBottom.setEnabled(true);
+				
 				Log.d("bullshite", "====onPageFinished");
 				if(!isLoadFail) {
 					mTvConnectFail.setVisibility(View.GONE);
@@ -109,6 +128,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		switch(v.getId()) {
 			case R.id.tv_connect_failed:
 				start();
+				break;
+			case R.id.btn_start_up:
+			case R.id.btn_start_bottom:
+				mLayoutMain.setVisibility(View.GONE);
+				mWebView.loadUrl("javascript:onStartChatClick()");
 				break;
 		}
 	}

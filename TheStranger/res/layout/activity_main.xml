@@ -16,5 +16,57 @@
         android:visibility="gone"
         android:gravity="center"
         android:background="#ffffff"/>
+    <RelativeLayout android:id="@+id/layout_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#c5ccd4">
+        <Button android:id="@+id/btn_start_up"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+			android:padding="10dp"
+            android:text="@string/btn_connecting"/>
+        
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/btn_start_up"
+            android:layout_above="@+id/btn_start_bottom">
+            <ImageView android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/moshengren_big"
+                android:scaleType="centerInside"
+                android:layout_alignParentBottom="true"/>
+            <LinearLayout android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:orientation="vertical" >
+	            <TextView android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="@string/introduce_title"
+	                android:gravity="center"
+	                android:padding="10dp"
+	                android:textSize="16sp"/>
+	            <View android:layout_width="fill_parent"
+	                android:layout_height="1dp"
+	                android:background="#000"/>
+	            <TextView android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:text="@string/introduce"
+	                android:layout_weight="1"
+	                android:gravity="center_horizontal|bottom"
+	                android:layout_margin="15dp"/>
+	            <View android:layout_width="fill_parent"
+	                android:layout_height="1dp"
+	                android:background="#000"/>
+	        </LinearLayout>
+        </RelativeLayout>
+        
+        <Button android:id="@id/btn_start_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+			android:padding="10dp"
+            android:text="@string/btn_connecting"
+            android:layout_alignParentBottom="true"/>
+        
+    </RelativeLayout>
 
 </RelativeLayout>

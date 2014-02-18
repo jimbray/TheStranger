@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TheStranger</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">陌路人</string>
+    <string name="action_settings">设置</string>
 	<string name="url">http://moluren.net/chat/</string>
-	<string name="fail_url">The Chatroom</string>
-	<string name="connect_fail">Connection Failed!!!\nPlease Check Your Network State\nTouch the screen to retry</string>
+	<string name="fail_url">陌路人聊天室</string>
+	<string name="connect_fail">网络连接失败！！！\n请检查您的网络\n触摸屏幕重试</string>
+	<string name="start_chat">开始聊天</string>
+	
+	<string name="introduce_title">陌路人 - 和陌生人聊天</string>
+	<string name="introduce">陌路人 是一个在线认识新朋友的全新服务。当你登录 陌路人时，我们随机选取另外一个用户和你搭配一对一的聊天。整个对话是在匿名状态下进行的，当然，这并不会限制你向你的陌生朋友透露你的联系方式以获取更进一步的联络。</string>
+	<string name="btn_connecting">正在连接......</string>
 
 </resources>
 

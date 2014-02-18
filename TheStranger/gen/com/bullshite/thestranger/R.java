@@ -21,10 +21,14 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int moshengren=0x7f020000;
+        public static final int moshengren_big=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080002;
+        public static final int action_settings=0x7f080005;
+        public static final int btn_start_bottom=0x7f080004;
+        public static final int btn_start_up=0x7f080003;
+        public static final int layout_main=0x7f080002;
         public static final int tv_connect_failed=0x7f080001;
         public static final int webview=0x7f080000;
     }
@@ -37,8 +41,12 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
+        public static final int btn_connecting=0x7f050008;
         public static final int connect_fail=0x7f050004;
         public static final int fail_url=0x7f050003;
+        public static final int introduce=0x7f050007;
+        public static final int introduce_title=0x7f050006;
+        public static final int start_chat=0x7f050005;
         public static final int url=0x7f050002;
     }
     public static final class style {
